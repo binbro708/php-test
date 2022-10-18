@@ -1,0 +1,34 @@
+// * {
+//   outline: 1px solid #000;
+// }
+.swiper {
+  height: 700px;
+  object-fit: cover;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-text {
+  padding: 0 100px;
+}
+
+.feedback {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+
+.map-group {
+  height: 500px;
+}
+.logo-img {
+  width: 100px;
+  height: 80px;
+}
+.circle {
+  height: 80px;
+  width: 80px;
+  background-color: rgb(99,102,241);
+}
