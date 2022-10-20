@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\FrontController;
+use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +17,20 @@ use app\Http\Controllers\FrontController;
 Route::get('/', [FrontController::class, 'index']);
 
 
-Route::get('/dashboard', function () {
+Route::get('/admin/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/admin/product',[ProductController::class, 'index']
+)->middleware(['auth', 'verified']);
+
+// 新增
+Route::get('/admin/product/create',[ProductController::class, 'create']
+)->middleware(['auth', 'verified']);
+//讀取
+Route::post('/admin/product/store',[ProductController::class, 'store']
+)->middleware(['auth', 'verified']);
+
+
 
 require __DIR__ . '/auth.php';

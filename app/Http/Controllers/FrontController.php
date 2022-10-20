@@ -10,11 +10,11 @@ class FrontController extends Controller
     public function index(){
 
 
-        dd("text");
+
         // $product= Product::find(1);
-        // $product= Product::get();
+        $product= Product::get();
 // dd($product);
-        // return view('frontend.bs.index',compact('product'));
+        return view('frontend.bs.index',compact('product'));
     }
 
     // weather
